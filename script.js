@@ -27,5 +27,9 @@ createGrid(grid);
 
 trigger.addEventListener("click", () => {
     let newGrid = Number(prompt("Please enter the number of boxes:"));
+
+    while (newGrid > 100) {
+        newGrid = Number(prompt("Enter number again(lower than 100):"))
+    }
     createGrid(newGrid);
 });
